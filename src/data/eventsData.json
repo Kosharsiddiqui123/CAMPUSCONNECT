@@ -1,0 +1,163 @@
+[
+    {
+      "id": 1,
+      "date": "October 10, 2023",
+      "title": "Hackathon 2023",
+      "desc": "24-hour coding competition for students to showcase their programming skills.",
+      "image": "Images/event (1).jpg",
+      "category": "Tech"
+    },
+    {
+      "id": 2,
+      "date": "October 18, 2023",
+      "title": "Inter-College Sports",
+      "desc": "Annual sports competition between colleges with various games and activities.",
+      "image": "Images/event (2).jpg",
+      "category": "Sports"
+    },
+    {
+      "id": 3,
+      "date": "October 25, 2023",
+      "title": "Art Exhibition",
+      "desc": "Showcase of student artwork from various disciplines and mediums.",
+      "image": "Images/event (3).jpg",
+      "category": "Cultural"
+    },
+    {
+      "id": 4,
+      "date": "November 2, 2023",
+      "title": "Leadership Workshop",
+      "desc": "Develop your leadership skills with industry experts and mentors.",
+      "image": "Images/event (4).jpg",
+      "category": "Workshops"
+    },
+    {
+      "id": 5,
+      "date": "November 12, 2023",
+      "title": "AI Conference",
+      "desc": "Learn about the latest advancements in artificial intelligence.",
+      "image": "Images/event (5).jpg",
+      "category": "Tech"
+    },
+    {
+      "id": 6,
+      "date": "November 20, 2023",
+      "title": "Film Festival",
+      "desc": "Celebrate cinema with screenings of classic and modern films.",
+      "image": "Images/event (6).jpg",
+      "category": "Cultural"
+    },
+    {
+      "id": 7,
+      "date": "November 28, 2023",
+      "title": "Robotics Challenge",
+      "desc": "Teams compete to design and program the best-performing robots.",
+      "image": "Images/event (7).jpg",
+      "category": "Tech"
+    },
+    {
+      "id": 8,
+      "date": "December 5, 2023",
+      "title": "Music Concert",
+      "desc": "Enjoy performances from talented student bands and musicians.",
+      "image": "Images/event (8).jpg",
+      "category": "Cultural"
+    },
+    {
+      "id": 9,
+      "date": "December 12, 2023",
+      "title": "Startup Pitch",
+      "desc": "Budding entrepreneurs pitch their ideas to a panel of judges.",
+      "image": "Images/event (9).jpg",
+      "category": "Workshops"
+    },
+    {
+      "id": 10,
+      "date": "December 20, 2023",
+      "title": "Cricket Tournament",
+      "desc": "Inter-department cricket matches to crown the campus champions.",
+      "image": "Images/event (10).jpg",
+      "category": "Sports"
+    },
+    {
+      "id": 11,
+      "date": "January 8, 2024",
+      "title": "Coding Bootcamp",
+      "desc": "Intensive programming workshop focusing on web development and problem solving.",
+      "image": "Images/event (11).jpg",
+      "category": "Tech"
+    },
+    {
+      "id": 12,
+      "date": "January 15, 2024",
+      "title": "Theater Night",
+      "desc": "Drama club presents a stage play written and directed by students.",
+      "image": "Images/event (12).jpg",
+      "category": "Cultural"
+    },
+    {
+      "id": 13,
+      "date": "January 22, 2024",
+      "title": "Debate Championship",
+      "desc": "Inter-college debate on trending global topics with expert judges.",
+      "image": "Images/event (13).jpg",
+      "category": "Workshops"
+    },
+    {
+      "id": 14,
+      "date": "February 3, 2024",
+      "title": "Basketball League",
+      "desc": "Department teams compete in an exciting basketball tournament.",
+      "image": "Images/event (14).jpg",
+      "category": "Sports"
+    },
+    {
+      "id": 15,
+      "date": "February 10, 2024",
+      "title": "Photography Contest",
+      "desc": "Capture the beauty of campus life in a photography competition.",
+      "image": "Images/event (15).jpg",
+      "category": "Cultural"
+    },
+    {
+      "id": 16,
+      "date": "February 18, 2024",
+      "title": "Cybersecurity Seminar",
+      "desc": "Experts discuss the importance of digital safety and ethical hacking.",
+      "image": "Images/event (16).jpg",
+      "category": "Tech"
+    },
+    {
+      "id": 17,
+      "date": "March 1, 2024",
+      "title": "Chess Championship",
+      "desc": "Test your strategy skills in the annual chess competition.",
+      "image": "Images/event (17).jpg",
+      "category": "Sports"
+    },
+    {
+      "id": 18,
+      "date": "March 10, 2024",
+      "title": "Cultural Fest",
+      "desc": "Celebrate diversity with music, dance, food, and cultural performances.",
+      "image": "Images/event (18).jpg",
+      "category": "Cultural"
+    },
+    {
+      "id": 19,
+      "date": "March 20, 2024",
+      "title": "Resume Building Workshop",
+      "desc": "Learn how to create professional resumes and prepare for interviews.",
+      "image": "Images/event (19).jpg",
+      "category": "Workshops"
+    },
+    {
+      "id": 20,
+      "date": "March 30, 2024",
+      "title": "Esports Tournament",
+      "desc": "Gamers battle it out in a competitive online gaming tournament.",
+      "image": "Images/event (20).jpg",
+      "category": "Sports"
+    }
+  ]
+  

@@ -1,0 +1,118 @@
+.event-details-page {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+}
+
+.event-details-card {
+  display: flex;
+  flex-direction: row; /* side-by-side on desktop */
+  max-width: 1000px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  gap: 20px;
+}
+
+.event-banner {
+  flex: 1;
+}
+
+.event-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 0 0 20px;
+}
+
+.event-info {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.event-info h2 {
+  font-size: 2rem;
+  color: goldenrod;
+  margin-bottom: 15px;
+}
+
+.event-date {
+  font-size: 1rem;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.event-category {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--secondary);
+  margin-bottom: 20px;
+}
+
+.event-desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.event-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: goldenrod;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: goldenrod;
+}
+
+.btn-outline {
+  border: 2px solid goldenrod;
+  color: black;
+}
+
+.btn-outline:hover {
+  background: goldenrod;
+  color: #fff;
+}
+
+.no-event {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.5rem;
+  color: red;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .event-details-card {
+    flex-direction: column; /* stacked on mobile */
+  }
+
+  .event-banner img {
+    border-radius: 20px 20px 0 0;
+    height: 300px;
+  }
+
+  .event-info {
+    padding: 20px;
+  }
+}
