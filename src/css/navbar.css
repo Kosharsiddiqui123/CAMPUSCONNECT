@@ -1,219 +1,172 @@
+:root {
+  --primary: #4361ee;
+  --secondary: #3a0ca3;
+  --accent: #f72585;
+  --dark: #212529;
+  --light: #f8f9fa;
+  --highlight: goldenrod;
+}
+
+/* Container */
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-a {
-    text-decoration: none;
-    color: var(--primary);
-    transition: all 0.3s ease;
-}
-
-a:hover {
-    color: beige;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    background: goldenrod;
-    color: white;
-    border-radius: 30px;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px goldenrod;
-}
-
-.btn-outline {
-    background: beige;
-    border: 2px solid goldenrod;
-    color: black;
-}
-
-.btn-outline:hover {
-    background: beige;
-    color: goldenrod;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 2.5rem;
-    color: var(--dark);
-    position: relative;
-    padding-bottom: 15px;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    border-radius: 2px;
-}
-
-/* Global styles for the header */
+/* Header */
 header {
-    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 15px 0;
-    animation: slideDown 0.5s ease;
+  background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 15px 0;
+  animation: slideDown 0.5s ease;
 }
 
-/* Slide-down animation for the header */
 @keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 /* Header content layout */
 .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Logo style */
+/* Logo */
 .logo {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    font-weight: 700;
-    color: white;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
 }
 
 .logo i {
-    margin-right: 10px;
-    color: goldenrod;
+  margin-right: 10px;
+  color: var(--highlight);
 }
 
-/* Navigation menu layout */
+/* Navigation menu desktop */
 nav ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 nav ul li {
-    margin: 0 15px;
-    font-size: larger;
+  margin: 0 15px;
+  font-size: larger;
 }
 
 nav ul li a {
-    font-weight: 500;
-    position: relative;
-    color: white;
-    text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 nav ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: white;
-    transition: width 0.3s ease;
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--highlight);
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--highlight);
 }
 
 nav ul li a:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 nav ul li a.active {
-    color: white;
+  color: var(--highlight);
 }
 
 nav ul li a.active::after {
-    width: 100%;
+  width: 100%;
 }
 
-/* Auth buttons style */
-.auth-buttons {
-    display: flex;
-    gap: 15px;
-}
-
-/* Mobile Menu Toggle styles */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-    #nav {
-        display: none;
-        position: absolute;
-        top: 60px;
-        /* Just below the header */
-        left: 0;
-        width: 100%;
-        background-color: #1a1a1a;
-        padding: 20px 0;
-    }
+  /* Side drawer nav */
+  #nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%; /* hidden */
+    width: 70%;
+    height: 100vh;
+    background-color: #1a1a1a;
+    padding-top: 80px;
+    transition: left 0.4s ease;
+    z-index: 999;
+  }
 
-    #nav.active {
-        display: block;
-    }
+  #nav.active {
+    left: 0; /* slide in */
+  }
 
-    .menu-toggle {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-    }
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    gap: 20px;
+  }
 
-    .menu-toggle span {
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-    }
+  nav ul li {
+    margin: 10px 0;
+  }
 
-    .menu-toggle.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
+  nav ul li a {
+    font-size: 18px;
+    color: white;
+  }
 
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
+  /* Hamburger */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+  }
 
-    .menu-toggle.active span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
+  .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
 
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
+  .menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
 
-    nav ul li {
-        margin: 15px 0;
-    }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
 
-    nav ul li a {
-        font-size: 18px;
-    }
+  .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }

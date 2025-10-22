@@ -11,6 +11,9 @@ import EventDetails from './pages/EventDetails'
 import Gallery from './pages/Gallery'
 import EventCalendar from './pages/EventCalendar'
 
+console.log("Version X") // add in your homepage or app
+
+
 const App = () => {
   return (
     <>

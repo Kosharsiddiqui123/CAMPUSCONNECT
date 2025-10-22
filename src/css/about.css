@@ -15,7 +15,6 @@
 
 /* Hero Section */
 .hero {
-  margin-top: 55px; 
   min-height: 60vh;
   display: flex;
   align-items: center;
@@ -68,6 +67,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 50px;
+  margin-bottom: 50px; /* space between sections */
 }
 
 .about-section.reverse {
@@ -100,6 +100,24 @@
   max-width: 450px;
   border-radius: 15px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-section,
+  .about-section.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 90%;
+  }
 }
 
 /* Team Section */
@@ -171,3 +189,5 @@
     max-width: 90%;
   }
 }
+
+

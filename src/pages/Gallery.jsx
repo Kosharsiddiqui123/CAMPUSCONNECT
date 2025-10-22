@@ -38,8 +38,7 @@ const Gallery = () => {
   return (
     <div className="gallery-page">
       <div className="gallery-header">
-        <h1>Event Gallery</h1>
-        <p>Explore our memorable events through the years</p>
+        <h1> 📸Event Gallery</h1>
       </div>
 
       <div className="filter-section">

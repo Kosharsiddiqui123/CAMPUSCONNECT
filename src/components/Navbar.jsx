@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
-import '../css/navbar.css'
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import "../css/navbar.css";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
 
   const toggleMenu = () => {
     setIsActive(!isActive);
+  };
+
+  const closeMenu = () => {
+    setIsActive(false);
   };
 
   return (
@@ -17,9 +22,8 @@ const Navbar = () => {
         </p>
 
         {/* Menu Toggle for Mobile */}
-        <div 
-          className={`menu-toggle ${isActive ? 'active' : ''}`} 
-          id="menuToggle" 
+        <div
+          className={`menu-toggle ${isActive ? "active" : ""}`}
           onClick={toggleMenu}
         >
           <span />
@@ -28,24 +32,48 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Links */}
-        <nav id="nav" className={isActive ? 'active' : ''}>
+        <nav id="nav" className={isActive ? "active" : ""}>
           <ul>
-            <li><Link to="/" data-page="home">Home</Link></li>
-            <li><Link to="/event" data-page="events">Events</Link></li>
-            <li><Link to="/about" data-page="about">About</Link></li>
-            <li><Link to="/contact" data-page="contact">Contact</Link></li>
-            <li><Link to="/gallery" data-page="gallery">Gallery</Link></li>
-            <li><Link to="/calender" data-page="calendar">Calendar</Link></li>
+            <li>
+              <Link to="/" data-page="home" onClick={closeMenu}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/event" data-page="events" onClick={closeMenu}>
+                Events
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" data-page="about" onClick={closeMenu}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" data-page="contact" onClick={closeMenu}>
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link to="/gallery" data-page="gallery" onClick={closeMenu}>
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link to="/calender" data-page="calendar" onClick={closeMenu}>
+                Calendar
+              </Link>
+            </li>
+            <li>
+              <Link to="/register" data-page="register" onClick={closeMenu}>
+                Register
+              </Link>
+            </li>
           </ul>
         </nav>
-
-        {/* Authentication Buttons */}
-        <div className="auth-buttons">
-          <Link to="/register" className="btn">Register</Link>
-        </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

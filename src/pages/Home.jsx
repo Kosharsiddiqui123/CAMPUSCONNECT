@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../css/home.css';
-import eventsData from '../data/eventsData.json'; // adjust path according to project structure
+import eventsData from '../data/eventsData.json'; 
 import { Link } from 'react-router-dom';
+
 const Home = () => {
   const [showModal, setShowModal] = useState(true);
   const [step, setStep] = useState(1);
@@ -118,7 +119,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Events Section - Dynamic */}
+      {/* Events Section */}
       <section className="events">
         <div className="container">
           <h2 className="section-title">Upcoming Events</h2>
@@ -133,8 +134,8 @@ const Home = () => {
                   <h3>{event.title}</h3>
                   <p>{event.desc}</p>
                   <Link to={`/event/${event.id}`} className="btn btn-outline">
-                  Learn more
-                </Link>
+                    Learn more
+                  </Link>
                 </div>
               </div>
             ))}
@@ -142,32 +143,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* About Preview Section */}
-      <div className="container about-content">
-        <div className="about-text">
-          <h2>CampusConnect</h2>
-          <p>
-            CampusConnect was founded with a mission to simplify event management for
-            educational institutions. We understand the challenges of organizing college
-            events and have created a platform that makes the process seamless.
-          </p>
-        </div>
-        <swiper-container
-          class="mySwiper"
-          pagination="true"
-          effect="cube"
-          grab-cursor="true"
-          cube-effect-shadow="true"
-          cube-effect-slide-shadows="true"
-          cube-effect-shadow-offset={20}
-          cube-effect-shadow-scale="0.94"
-        >
-          <swiper-slide><img src="Images/slider (1).jpg" alt="Slide 1" /></swiper-slide>
-          <swiper-slide><img src="Images/slider (2).jpg" alt="Slide 2" /></swiper-slide>
-          <swiper-slide><img src="Images/slider (3).jpg" alt="Slide 3" /></swiper-slide>
-          <swiper-slide><img src="Images/slider (4).jpg" alt="Slide 4" /></swiper-slide>
-        </swiper-container>
-      </div>
     </>
   );
 };

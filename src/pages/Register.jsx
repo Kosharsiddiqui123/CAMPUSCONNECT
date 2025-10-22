@@ -65,86 +65,98 @@ const Register = () => {
     e.preventDefault();
     if (validate()) {
       setSuccess(true);
-      setFormData({ firstName: "", lastName: "", email: "", contact: "", event: "" });
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        contact: "",
+        event: "",
+      });
     }
   };
 
   return (
     <div className="register-page">
-      <div className="form-container">
-        <h2 className="form-title">Event Registration</h2>
-        <p className="form-subtitle">Register now to be part of amazing experiences!</p>
+      <div className="register-container">
+        <h2 className="registration-title">Registration</h2>
 
-        <form onSubmit={handleSubmit} noValidate>
-          <div className="form-group">
-            <input
-              type="text"
-              name="firstName"
-              placeholder="First Name"
-              value={formData.firstName}
-              onChange={handleChange}
-              className={errors.firstName ? "error-input" : ""}
-            />
-            {errors.firstName && <p className="error">{errors.firstName}</p>}
-          </div>
+        <div className="form-container">
+          <h2 className="form-title">Event Registration</h2>
+          <p className="form-subtitle">
+            Register now to be part of amazing experiences!
+          </p>
 
-          <div className="form-group">
-            <input
-              type="text"
-              name="lastName"
-              placeholder="Last Name"
-              value={formData.lastName}
-              onChange={handleChange}
-              className={errors.lastName ? "error-input" : ""}
-            />
-            {errors.lastName && <p className="error">{errors.lastName}</p>}
-          </div>
+          <form onSubmit={handleSubmit} noValidate>
+            <div className="form-group">
+              <input
+                type="text"
+                name="firstName"
+                placeholder="First Name"
+                value={formData.firstName}
+                onChange={handleChange}
+                className={errors.firstName ? "error-input" : ""}
+              />
+              {errors.firstName && <p className="error">{errors.firstName}</p>}
+            </div>
 
-          <div className="form-group">
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              value={formData.email}
-              onChange={handleChange}
-              className={errors.email ? "error-input" : ""}
-            />
-            {errors.email && <p className="error">{errors.email}</p>}
-          </div>
+            <div className="form-group">
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Last Name"
+                value={formData.lastName}
+                onChange={handleChange}
+                className={errors.lastName ? "error-input" : ""}
+              />
+              {errors.lastName && <p className="error">{errors.lastName}</p>}
+            </div>
 
-          <div className="form-group">
-            <input
-              type="text"
-              name="contact"
-              placeholder="Contact Number"
-              value={formData.contact}
-              onChange={handleChange}
-              className={errors.contact ? "error-input" : ""}
-            />
-            {errors.contact && <p className="error">{errors.contact}</p>}
-          </div>
+            <div className="form-group">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                value={formData.email}
+                onChange={handleChange}
+                className={errors.email ? "error-input" : ""}
+              />
+              {errors.email && <p className="error">{errors.email}</p>}
+            </div>
 
-          <div className="form-group">
-            <select
-              name="event"
-              value={formData.event}
-              onChange={handleChange}
-              className={errors.event ? "error-input" : ""}
-            >
-              <option value="">-- Select Event --</option>
-              {eventsData.map((event) => (
-                <option key={event.id} value={event.title}>
-                  {event.title}
-                </option>
-              ))}
-            </select>
-            {errors.event && <p className="error">{errors.event}</p>}
-          </div>
+            <div className="form-group">
+              <input
+                type="text"
+                name="contact"
+                placeholder="Contact Number"
+                value={formData.contact}
+                onChange={handleChange}
+                className={errors.contact ? "error-input" : ""}
+              />
+              {errors.contact && <p className="error">{errors.contact}</p>}
+            </div>
 
-          <button type="submit" className="submit-btn">
-            Register Now
-          </button>
-        </form>
+            <div className="form-group">
+              <select
+                name="event"
+                value={formData.event}
+                onChange={handleChange}
+                className={errors.event ? "error-input" : ""}
+              >
+                <option value="">-- Select Event --</option>
+                {eventsData.map((event) => (
+                  <option key={event.id} value={event.title}>
+                    {event.title}
+                  </option>
+                ))}
+              </select>
+              {errors.event && <p className="error">{errors.event}</p>}
+            </div>
+
+            <button type="submit" className="submit-btn">
+              Register Now
+            </button>
+          </form>
+        </div>
       </div>
 
       {/* Success Popup */}

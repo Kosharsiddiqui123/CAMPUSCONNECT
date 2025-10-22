@@ -6,50 +6,45 @@ const About = () => {
     <div className="about-wrapper">
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero-background"></div>
         <div className="container">
           <h1>ABOUT OUR COLLEGE</h1>
           <p>
-            An introduction to who we are, our values, and the unique culture that defines us. Get
-            to know the heart and soul of our institution.
+            An introduction to who we are, our values, and the unique culture that defines us. 
+            Get to know the heart and soul of our institution.
           </p>
         </div>
       </section>
 
       {/* Mission Section */}
       <section className="about-section">
-        <div className="about-container">
-          <div className="about-text">
-            <h2>Our Mission</h2>
-            <p>
-              Welcome to <b>CAMPUS CONNECT</b>, a vibrant hub of learning, tradition, and community
-              spirit. Since our founding, we’ve built a legacy of academic excellence and a
-              welcoming environment for students, staff, and visitors alike. Our college isn't just a
-              place for education — it’s where lifelong connections are formed, diverse perspectives
-              are celebrated, and future leaders are nurtured.
-            </p>
-          </div>
-          <div className="about-image">
-            <img src="Images/about.png" alt="Our Mission" />
-          </div>
+        <div className="about-text">
+          <h2>Our Mission</h2>
+          <p>
+            Welcome to <b>CAMPUS CONNECT</b>, a vibrant hub of learning, tradition, and community
+            spirit. Since our founding, we’ve built a legacy of academic excellence and a welcoming
+            environment for students, staff, and visitors alike. Our college isn't just a place for
+            education — it’s where lifelong connections are formed, diverse perspectives are
+            celebrated, and future leaders are nurtured.
+          </p>
         </div>
-    
+        <div className="about-image">
+          <img src="Images/about.png" alt="Our Mission" />
+        </div>
+      </section>
 
       {/* Traditions Section */}
-      
-        <div className="about-container">
-          <div className="about-image">
-            <img src="Images/trraditional.jpg" alt="Our Traditions" />
-          </div>
-          <div className="about-text">
-            <h2>Our Traditions</h2>
-            <p>
-              At <b>CAMPUS CONNECT</b>, we take immense pride in our rich traditions that have been
-              passed down through generations. From our annual events to the unique rituals that
-              define us, these traditions create belonging and foster school pride. They bridge the
-              past, present, and future, making each student and guest part of something special.
-            </p>
-          </div>
+      <section className="about-section reverse">
+        <div className="about-text">
+          <h2>Our Traditions</h2>
+          <p>
+            At <b>CAMPUS CONNECT</b>, we take immense pride in our rich traditions that have been
+            passed down through generations. From our annual events to the unique rituals that
+            define us, these traditions create belonging and foster school pride. They bridge the
+            past, present, and future, making each student and guest part of something special.
+          </p>
+        </div>
+        <div className="about-image">
+          <img src="Images/trraditional.jpg" alt="Our Traditions" />
         </div>
       </section>
 

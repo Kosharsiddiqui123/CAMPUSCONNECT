@@ -11,11 +11,10 @@ const Contact = () => {
 
   const [errors, setErrors] = useState({});
 
-  // Custom regex patterns
   const regex = {
-    email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, // RFC-style
-    phone: /^\+?[0-9]{7,15}$/, // allows + and 7–15 digits
-    address: /^[a-zA-Z0-9\s,.'\-/#]{5,100}$/, // realistic address
+    email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+    phone: /^\+?[0-9]{7,15}$/,
+    address: /^[a-zA-Z0-9\s,.'\-/#]{5,100}$/,
   };
 
   const validate = () => {
@@ -60,6 +59,7 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
+      {/* Hero */}
       <section className="hero">
         <div className="hero-background" />
         <div className="container">
@@ -71,10 +71,12 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* Main */}
       <div className="maindiv">
         <section className="contact-section">
-          <div className="contact-form-wrapper">
-            <form className="contact-form" onSubmit={handleSubmit} noValidate>
+          {/* Contact Form */}
+          <div className="form-wrapper">
+            <form className="register-like-form" onSubmit={handleSubmit} noValidate>
               <h1 className="form-title">CONTACT US</h1>
 
               <input
@@ -115,6 +117,7 @@ const Contact = () => {
             </form>
           </div>
 
+          {/* Map */}
           <div className="map-container row">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.309673671859!2d-122.41941518468163!3d37.77492977975933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064b8f4c5e5%3A0xa2c5e5d8f9c75b8d!2sUniversity!5e0!3m2!1sen!2sus!4v1694433600000!5m2!1sen!2sus"
